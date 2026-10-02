@@ -37,7 +37,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           <a href="#work" className="hover:text-white transition-colors">
             Selected Work
           </a>
-          <a href="#proof-editing" className="hover:text-white transition-colors">
+          <a href="#work-areas" className="hover:text-white transition-colors">\n            Work Areas\n          </a>\n          <a href="#proof-editing" className="hover:text-white transition-colors">
             Editing Proof
           </a>
           <a href="#recruiter-eval" className="hover:text-white transition-colors">
