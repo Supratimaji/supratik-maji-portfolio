@@ -39,6 +39,7 @@ import { RecruiterAuditDrawer } from './components/RecruiterAuditDrawer';
 import { CaseStudyModal } from './components/CaseStudyModal';
 import { ResumeModal } from './components/ResumeModal';
 import { InquiryModal } from './components/InquiryModal';
+import { WorkAreas } from './components/WorkAreas';
 
 export default function App() {
   // Modal & Drawer states
@@ -83,6 +84,11 @@ export default function App() {
   });
 
   const featuredHeroProject = PORTFOLIO_PROJECTS[0];
+
+  const handleOpenWorkAreaProject = (slug: string) => {
+    const project = PORTFOLIO_PROJECTS.find((item) => item.slug === slug);
+    if (project) setSelectedProject(project);
+  };
 
   return (
     <div id="top" className="min-h-screen bg-[#090a0f] text-[#f3f4f6] font-sans antialiased selection:bg-amber-400 selection:text-black">
@@ -297,7 +303,10 @@ export default function App() {
 
         </section>
 
-        {/* 5. Proof Pillar 01 — Dedicated Editing & Retouching Deep-Dive */}
+        {/* 5. Recruiter Work Map — Main Work Areas */}
+        <WorkAreas onOpenProject={handleOpenWorkAreaProject} />
+
+        {/* 6. Proof Pillar 01 — Dedicated Editing & Retouching Deep-Dive */}
         <section id="proof-editing" className="px-6 max-w-7xl mx-auto space-y-8">
           
           <div className="max-w-2xl space-y-2">
